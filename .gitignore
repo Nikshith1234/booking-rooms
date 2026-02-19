@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Environment variables (contains sensitive credentials!)
+.env
+
+# SQLite database
+*.db
+
+# Flask session / instance
+instance/
+*.cfg
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card confirmation-card">
+            <div class="success-icon">✓</div>
+            <h1>Booking Confirmed!</h1>
+
+            <div class="booking-details">
+                <table class="details-table">
+                    <tr>
+                        <th>Booking ID</th>
+                        <td><span id="booking_id">{{ booking_id }}</span></td>
+                    </tr>
+                    <tr>
+                        <th>Room Number</th>
+                        <td>Room {{ room_number }}</td>
+                    </tr>
+                    <tr>
+                        <th>Date</th>
+                        <td>{{ date }}</td>
+                    </tr>
+                    <tr>
+                        <th>Time</th>
+                        <td>{{ start_time }} - {{ end_time }}</td>
+                    </tr>
+                    <tr>
+                        <th>Number of People</th>
+                        <td>{{ num_people }}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="action-section">
+                <a href="/booking">
+                    <button>Book Another Room</button>
+                </a>
+                <a href="/dashboard">
+                    <button class="secondary-button">Back to Dashboard</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

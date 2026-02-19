@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Room Booking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header-bar">
+                <h1>Room Booking Dashboard</h1>
+                <a href="/logout" class="logout-link">Logout</a>
+            </div>
+
+            <h2>Available Rooms</h2>
+            <table class="rooms-table">
+                <thead>
+                    <tr>
+                        <th>Room Number</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for room in rooms %}
+                    <tr>
+                        <td>Room {{ room }}</td>
+                        <td><span class="status-available">Available</span></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="action-section">
+                <a href="/booking">
+                    <button id="book_room_button">Book Room</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
